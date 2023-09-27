@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BUAT ADIKKU ARIN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-one">
+        <h1 id="judul">COBA PILIH DEH RINNN</h1>
+        <div class="wrapper-kedua">
+            <p id="pertanyaan">YANG MANA YANG PALING KAMU SAYANG???</p>
+            <ul>
+                <li>
+                    <label for="a" id="labelA">
+                        <input type="radio" name="jawaban" id="a" value="a">
+                        <p id="p1" class="jawaban">MAMA</p>
+                    </label>
+                </li>
+                <li>
+                    <label for="b" id="labelB">
+                        <input type="radio" name="jawaban" id="b" value="b">
+                        <p id="p2" class="jawaban">PAPA</p>
+                    </label>
+                </li>
+                <li>
+                    <label for="c" id="labelC">
+                        <input type="radio" name="jawaban" id="c" value="c">
+                        <p id="p3" class="jawaban">YANG BUAT</p>
+                    </label>
+                </li>
+                <li>
+                    <label for="d" id="labelD">
+                        <input type="radio" name="jawaban" id="d" value="d">
+                        <p id="p4" class="jawaban">LAUREN</p>
+                    </label>
+                </li>
+            </ul>
+
+            <div id="fotoArin" class="foto-arin">
+
+            </div>
+
+            <button onclick="next()" id="oneButton">Jawab</button>
+            <button onclick="back()" style="margin-top: 15px;">BACK</button>
+        </div>
+    </div>
+    <div class="footer-kedua">
+        <footer>&copy; Copyright 2023, Bayem</footer>
+    </div>
+    <script>
+
+        var jawabanA = 'a';
+        var jawabanC = 'c';
+        var jawabanB = 'b';
+        var jawabanD = 'd';
+
+
+        function next() {
+
+            var jawabanPengguna = document.querySelector('input[name="jawaban"]:checked');
+
+            var pesanA = "ENGAKK BOLEEHHH INI BUKAN MAMA KAMU TAU RIN 😂";
+            var pesanB = "ENGAKKKK BOLEEEEE INI BUKAN BAPA KAMU SIAPA TAU BAPA AKUH, EH BAPA KITA SAMA YAHHH...";
+            var pesanC = "HEHEHEHEHE AKU JUGA KOK ❤️";
+            var pesanD = "IHHHH JADI GITU GAK PILIH AKU :(";
+
+            if (jawabanPengguna) {
+                if (jawabanPengguna.value === jawabanA) {
+                    alert(pesanA);
+                } else if (jawabanPengguna.value === jawabanB) {
+                    alert(pesanB);
+                } else if (jawabanPengguna.value === jawabanC) {
+                    alert(pesanC);
+                    setTimeout(function () {
+                        window.location.href = "interface1.html"
+                    }, 500);
+                } else if (jawabanPengguna.value === jawabanD) {
+                    alert(pesanD);
+                } else {
+                    alert("JAWABB DONGG");
+                }
+            }
+        }
+
+        function back() {
+            window.location.href = "index.html";
+        }
+
+
+    </script>
+</body>
+
+</html>
