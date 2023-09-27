@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BUAT ADIKKU ARIN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 id="judul">HALLOOOO INI PASTII ARINN COBA KAMU PILIH</h1>
+
+    <div class="container-one">
+        <div class="wrapper">
+            <p id="pertanyaan">KAMU SUKANYA YANG MANA COBA KAMU PILIH</p>
+            <ul>
+                <li>
+                    <label for="a" id="labelA">
+                        <input type="radio" name="jawaban" id="a" value="a">
+                        <p id="p1">Kucing</p>
+                    </label>
+                </li>
+                <li>
+                    <label for="b" id="labelB">
+                        <input type="radio" name="jawaban" id="b" value="b">
+                        <p id="p2">Gogok</p>
+                    </label>
+                </li>
+                <li>
+                    <label for="c" id="labelC">
+                        <input type="radio" name="jawaban" id="c" value="c">
+                        <p id="p3">Marmut</p>
+                    </label>
+                </li>
+                <li>
+                    <label for="d" id="labelD">
+                        <input type="radio" name="jawaban" id="d" value="d">
+                        <p id="p4">Panda</p>
+                    </label>
+                </li>
+            </ul>
+
+            <div id="fotoArin" class="foto-arin">
+
+            </div>
+
+            <button onclick="next()" id="oneButton">Jawab</button>
+        </div>
+    </div>
+    <script>
+        var jawabanA = 'a';
+        var jawabanC = 'c';
+        var jawabanB = 'b';
+        var jawabanD = 'd';
+
+
+
+        // Memeriksa jawaban yang diberikan
+        function next() {
+
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var p3 = document.getElementById("p3");
+            var p4 = document.getElementById("p4");
+
+            var labelA = document.getElementById("labelA");
+            var labelB = document.getElementById("labelB");
+            var labelC = document.getElementById("labelC");
+            var labelD = document.getElementById("labelD");
+
+
+            var jawabanPengguna = document.querySelector('input[name="jawaban"]:checked');
+
+            var pertanyaan = document.getElementById("pertanyaan");
+            pertanyaan.textContent = "HAYOO COBA KAMU PILIH, YANG MANA PALING LUCU";
+            pertanyaan.style.textAlign = "center";
+
+            p1.textContent = "";
+            p2.textContent = "";
+            p3.textContent = "";
+            p4.textContent = "";
+
+
+
+            if (jawabanPengguna) {
+                if (jawabanPengguna.value === jawabanC) {
+                    alert('ciee suka yang berbulu, kecil, lucu');
+                    pilihMarmut();
+                } else if (jawabanPengguna.value === jawabanA) {
+                    alert('ciee sukanya kaya lauren');
+                    pilihKucing();
+                } else if (jawabanPengguna.value === jawabanB) {
+                    alert('kalo ini, aku juga sukaaa, jangan jangan kita.......');
+                    pilihGogok();
+                } else if (jawabanPengguna.value === jawabanD) {
+                    alert('ihhh sukanya yang gemoy gemoy, kaya kamu');
+                    pilihPanda();
+                } else {
+                    alert("JAWABB DONGG");
+                }
+            }
+        }
+
+        function pilihPanda() {
+            var judul = document.getElementById("judul");
+            judul.textContent = 'CIEEE SUKANYA YANG GEMOY KAYA ARINN';
+
+            var labelA = document.getElementById("labelA");
+            var labelB = document.getElementById("labelB");
+            var labelC = document.getElementById("labelC");
+            var labelD = document.getElementById("labelD");
+
+            var image1 = document.createElement("img");
+            var image2 = document.createElement("img");
+            var image3 = document.createElement("img");
+            var image4 = document.createElement("img");
+
+            image1.src = "image/panda1.jpg";
+            image1.className = "foto";
+            labelA.appendChild(image1);
+
+            image2.src = "image/panda2.jpg";
+            image2.className = "foto";
+            labelB.appendChild(image2);
+
+            image3.src = "image/panda3.jpg";
+            image3.className = "foto";
+            labelC.appendChild(image3);
+
+            image4.src = "image/panda4.jpg";
+            image4.className = "foto";
+            labelD.appendChild(image4);
+
+            var oneButton = document.getElementById("oneButton");
+
+            oneButton.onclick = null;
+
+            oneButton.addEventListener("click", function () {
+                arinFour()
+            });
+        }
+
+        function arinFour() {
+            alert("BUKANNN ITUUUUUU");
+
+            var oneButton = document.getElementById("oneButton");
+            
+            oneButton.textContent = "PILIH LAGIII"
+            oneButton.style.display= "none"
+
+            var fotoArin = document.getElementById("fotoArin");
+
+            var yangIni = document.createElement("h1");
+            yangIni.textContent = "Yanggg ini yang benerr";
+
+            var myArin = document.createElement("img");
+            myArin.className = "foto";
+            myArin.src = "image/arin 4.png";
+
+            fotoArin.appendChild(yangIni);
+            fotoArin.appendChild(myArin);
+        }
+
+        function pilihMarmut() {
+            var judul = document.getElementById("judul");
+            judul.textContent = 'CIEE PILIHH Marmutt, marmutkan kadang kadang bauu tapi lucu sihh';
+
+            var labelA = document.getElementById("labelA");
+            var labelB = document.getElementById("labelB");
+            var labelC = document.getElementById("labelC");
+            var labelD = document.getElementById("labelD");
+
+            var image1 = document.createElement("img");
+            var image2 = document.createElement("img");
+            var image3 = document.createElement("img");
+            var image4 = document.createElement("img");
+
+            image1.src = "image/mar1.jpg";
+            image1.className = "foto";
+            labelA.appendChild(image1);
+
+            image2.src = "image/mar2.jpeg";
+            image2.className = "foto";
+            labelB.appendChild(image2);
+
+            image3.src = "image/mar3.jpg";
+            image3.className = "foto";
+            labelC.appendChild(image3);
+
+            image4.src = "image/mar4.webp";
+            image4.className = "foto";
+            labelD.appendChild(image4);
+
+            var oneButton = document.getElementById("oneButton");
+
+            oneButton.onclick = null;
+
+            oneButton.addEventListener("click", function () {
+                arinTree()
+            });
+        }
+
+        function arinTree() {
+            alert("salah 😜");
+
+            var oneButton = document.getElementById("oneButton");
+            
+            oneButton.textContent = "PILIH LAGIII"
+            oneButton.style.display= "none"
+
+            var fotoArin = document.getElementById("fotoArin");
+
+            var yangIni = document.createElement("h1");
+            yangIni.textContent = "Ini yang bawahh lebih lucu dari apapunnn"
+
+            var myArin = document.createElement("img");
+            myArin.className = "foto";
+            myArin.src = "image/arin 3.png";
+
+            fotoArin.appendChild(yangIni);
+            fotoArin.appendChild(myArin);
+        }
+
+        function pilihGogok() {
+            var judul = document.getElementById("judul");
+            judul.textContent = 'CIEE PILIHH GOGOK, Aku juga suka GOGOKK';
+
+            var labelA = document.getElementById("labelA");
+            var labelB = document.getElementById("labelB");
+            var labelC = document.getElementById("labelC");
+            var labelD = document.getElementById("labelD");
+
+            var image1 = document.createElement("img");
+            var image2 = document.createElement("img");
+            var image3 = document.createElement("img");
+            var image4 = document.createElement("img");
+
+            image1.src = "image/dog1.webp";
+            image1.className = "foto";
+            labelA.appendChild(image1);
+
+            image2.src = "image/dog 2.jpg";
+            image2.className = "foto";
+            labelB.appendChild(image2);
+
+            image3.src = "image/dog 3.jpeg";
+            image3.className = "foto";
+            labelC.appendChild(image3);
+
+            image4.src = "image/dog 4.jpg";
+            image4.className = "foto";
+            labelD.appendChild(image4);
+
+            var oneButton = document.getElementById("oneButton");
+
+            oneButton.onclick = null;
+
+            oneButton.addEventListener("click", function () {
+                arinTwo()
+            });
+        }
+
+        function arinTwo() {
+            alert("salah tauu");
+
+            var oneButton = document.getElementById("oneButton");
+            
+            oneButton.textContent = "PILIH LAGIII"
+            oneButton.style.display= "none"
+
+            var fotoArin = document.getElementById("fotoArin");
+
+            var yangIni = document.createElement("h1");
+            yangIni.textContent = "Yang bener tuh yang ini yang palingg lucuuuu 😜"
+
+            var myArin = document.createElement("img");
+            myArin.className = "foto";
+            myArin.src = "image/arin 2.png";
+
+            fotoArin.appendChild(yangIni);
+            fotoArin.appendChild(myArin);
+        }
+
+        function pilihKucing() {
+            var judul = document.getElementById("judul");
+            judul.textContent = 'CIEE PILIHH KUCING';
+
+            var labelA = document.getElementById("labelA");
+            var labelB = document.getElementById("labelB");
+            var labelC = document.getElementById("labelC");
+            var labelD = document.getElementById("labelD");
+
+            var image1 = document.createElement("img");
+            var image2 = document.createElement("img");
+            var image3 = document.createElement("img");
+            var image4 = document.createElement("img");
+
+            image1.src = "image/kucing 1.jpg";
+            image1.className = "foto";
+            labelA.appendChild(image1);
+
+            image2.src = "image/kucing 2.jpg";
+            image2.className = "foto";
+            labelB.appendChild(image2);
+
+            image3.src = "image/kucing 3.jpeg";
+            image3.className = "foto";
+            labelC.appendChild(image3);
+
+            image4.src = "image/kucing 4.jpg";
+            image4.className = "foto";
+            labelD.appendChild(image4);
+
+            var oneButton = document.getElementById("oneButton");
+
+            oneButton.onclick = null;
+
+            oneButton.addEventListener("click", function () {
+                arin()
+            });
+        }
+
+        function arin() {
+            alert("SALAAHHHHH");
+
+            var oneButton = document.getElementById("oneButton");
+            
+            oneButton.textContent = "PILIH LAGIII";
+            oneButton.style.display= "none"
+
+            var fotoArin = document.getElementById("fotoArin");
+
+            var yangIni = document.createElement("h1");
+            yangIni.textContent = "Yang bener yang ini yang palingg lucuuuu ❤️";
+
+            var myArin = document.createElement("img");
+            myArin.className = "foto";
+            myArin.style.transform = "rotate(90deg)"
+            myArin.src = "image/arin1.png";
+
+            fotoArin.appendChild(yangIni);
+            fotoArin.appendChild(myArin);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALOOO</title>
+</head>
+<body>
+    <div>
+        <p>Jadi kamu siapa ?? atau kamu suka di pangil apa?</p>
+        <input type="text" id="nama" placeholder="NAMA">
+    </div><br>
+
+    <button onclick="next()">NEXT</button>
+
+    <script>
+
+        function next() {
+            var nama = document.getElementById("nama").value;
+            var ansa = "ansa";
+            var lauren = "lauren";
+
+            if (nama === "arin") {
+                alert("iya adikku");
+                window.location.href = "index.html"
+            } else if (nama === ansa) {
+                alert("iya adikku");
+                window.location.href = "index.html"
+            } else if (nama === lauren) {
+                alert("Yang kamu belum di buat hehe nanti yahh baru arin");
+            } else {
+                alert("keknya salah dehhh coba arin, ato ansa");
+            }
+        }
+    </script>
+</body>
+</html>

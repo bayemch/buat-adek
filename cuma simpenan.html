@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh List dan Pemeriksaan Jawaban</title>
+</head>
+<body>
+    <p>Pilih salah satu dari daftar berikut:</p>
+    <ul>
+        <li><label for="a"><input type="radio" name="jawaban" id="a" value="a"> <img src="image/kucing 1.jpg" style="height: 100px;"/></label></li>
+        <li><label for="b"><input type="radio" name="jawaban" id="b" value="b"> <img src="image/kucing 1.jpg" style="height: 100px;"/></label></li>
+        <li><label for="c"><input type="radio" name="jawaban" id="c" value="c"> c</label></li>
+        <li><label for="d"><input type="radio" name="jawaban" id="d" value="d"> d</label></li>
+    </ul>
+    <button onclick="periksaJawaban()">Periksa Jawaban</button>
+
+    <script>
+        // Menentukan jawaban yang benar
+        var jawabanBenar = 'c';
+
+        // Memeriksa jawaban yang diberikan
+        function periksaJawaban() {
+            var jawabanPengguna = document.querySelector('input[name="jawaban"]:checked');
+
+            if (jawabanPengguna) {
+                if (jawabanPengguna.value === jawabanBenar) {
+                    alert('Jawaban benar! Anda memilih c.');
+                } else {
+                    alert('Jawaban salah. Coba lagi.');
+                }
+            } else {
+                alert('Pilih salah satu jawaban terlebih dahulu.');
+            }
+        }
+    </script>
+</body>
+</html>
