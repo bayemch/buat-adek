@@ -1,7 +1,9 @@
-*body, html {
+body, html {
     padding: 0;
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
+    background:linear-gradient(to right, #183D3D, #5C8374) ;
+    color: #ffffff;
 }
 
 h1 {
@@ -11,19 +13,51 @@ h1 {
 li {
     list-style-type: none;
     margin-top: 10px;
+    display: flex;
+}
+
+.input-satu {
+    width: 300px;
+    height: 50px;
+    text-align: center;
 }
 
 .container-one {
     width: 100vw;
     height: 100vh;
     justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.wrapper {
+.container-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper-pertama {
     display: flex;
     flex-direction: column;
     align-items: center ;
     justify-content: center;
+    background-color: #93B1A6;
+    height: 400px;
+    width: 400px;
+    border-radius: 7px;
+    border: #ffffffff solid 3px;
+    padding: 5px;
+}
+
+.wrapper-kedua {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #93B1A6;
+    border-radius: 7px;
+    border: #ffffff solid 3px;
+    padding: 7px;
 }
 
 ul {
@@ -45,4 +79,18 @@ label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.jawaban {
+    text-align: center;
+}
+
+
+
+button {
+    height: 60px;
+    width: 70px;
+    background: #78D6C6;
+    border: #fff solid 2px;
+    border-radius: 2px;
 }
