@@ -10,10 +10,9 @@
 
 <body>
 
-    <h1 id="judul">HALLOOOO INI PASTII ARINN COBA KAMU PILIH</h1>
-
-    <div class="container-one">
-        <div class="wrapper">
+    <div class="container-tree">
+        <h1 id="judul">PERTANYAAN TERAKHIR</h1>
+        <div class="wrapper-kedua">
             <p id="pertanyaan">KAMU SUKANYA YANG MANA COBA KAMU PILIH</p>
             <ul>
                 <li>
@@ -49,6 +48,9 @@
             <button onclick="next()" id="oneButton">Jawab</button>
         </div>
     </div>
+    <div class="footer">
+        <footer>&copy; Copyright 2023, Bayem</footer>
+    </div>
     <script>
         var jawabanA = 'a';
         var jawabanC = 'c';
@@ -56,8 +58,6 @@
         var jawabanD = 'd';
 
 
-
-        // Memeriksa jawaban yang diberikan
         function next() {
 
             var p1 = document.getElementById("p1");
@@ -161,6 +161,11 @@
 
             fotoArin.appendChild(yangIni);
             fotoArin.appendChild(myArin);
+
+            var makasih = document.createElement("h1");
+            makasih.textContent = "MAKASIHH YA RINNN NANTI KAPAN KAPAN AKU TAMBAHIN SESUATU LAGIII DI SINI, KAMU HARUSS SEMANGATTT MENJALANKAN HIDUP YANG PENUS COBAAN ❤️"
+            
+            fotoArin.appendChild(makasih);
         }
 
         function pilihMarmut() {
@@ -204,6 +209,8 @@
 
         function arinTree() {
             alert("salah 😜");
+            var judul = document.getElementById("judul");
+            judul.style.display = "none";
 
             var oneButton = document.getElementById("oneButton");
             
@@ -221,6 +228,11 @@
 
             fotoArin.appendChild(yangIni);
             fotoArin.appendChild(myArin);
+
+            var makasih = document.createElement("h1");
+            makasih.textContent = "MAKASIHH YA RINNN NANTI KAPAN KAPAN AKU TAMBAHIN SESUATU LAGIII DI SINI, KAMU HARUSS SEMANGATTT MENJALANKAN HIDUP YANG PENUS COBAAN ❤️"
+            
+            fotoArin.appendChild(makasih);
         }
 
         function pilihGogok() {
@@ -281,11 +293,17 @@
 
             fotoArin.appendChild(yangIni);
             fotoArin.appendChild(myArin);
+
+            var makasih = document.createElement("h1");
+            makasih.textContent = "MAKASIHH YA RINNN NANTI KAPAN KAPAN AKU TAMBAHIN SESUATU LAGIII DI SINI, KAMU HARUSS SEMANGATTT MENJALANKAN HIDUP YANG PENUS COBAAN ❤️"
+            
+            fotoArin.appendChild(makasih);
         }
 
         function pilihKucing() {
             var judul = document.getElementById("judul");
             judul.textContent = 'CIEE PILIHH KUCING';
+            judul.style.zIndex = "9";
 
             var labelA = document.getElementById("labelA");
             var labelB = document.getElementById("labelB");
@@ -324,6 +342,9 @@
 
         function arin() {
             alert("SALAAHHHHH");
+            var judul = document.getElementById("judul");
+            judul.textContent = 'CIEE PILIHH KUCING';
+            judul.style.zIndex = "9";
 
             var oneButton = document.getElementById("oneButton");
             
@@ -342,6 +363,11 @@
 
             fotoArin.appendChild(yangIni);
             fotoArin.appendChild(myArin);
+
+            var makasih = document.createElement("h1");
+            makasih.textContent = "MAKASIHH YA RINNN NANTI KAPAN KAPAN AKU TAMBAHIN SESUATU LAGIII DI SINI, KAMU HARUSS SEMANGATTT MENJALANKAN HIDUP YANG PENUS COBAAN ❤️"
+            
+            fotoArin.appendChild(makasih);
         }
     </script>
 </body>
