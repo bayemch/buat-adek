@@ -48,6 +48,7 @@ li {
     border-radius: 7px;
     border: #ffffffff solid 3px;
     padding: 5px;
+    box-shadow: #222 2px 3px 4px 3px;
 }
 
 .wrapper-kedua {
@@ -58,6 +59,7 @@ li {
     border-radius: 7px;
     border: #ffffff solid 3px;
     padding: 7px;
+    box-shadow: #222 2px 3px 4px 3px;
 }
 
 ul {
